@@ -56,7 +56,7 @@ begin
 end;
 
 procedure TForm1.ADOTable1OnCalcFields(DataSet: TDataSet);
-begin                           
+begin
   ADOTable1Field2.AsInteger:=YearsBetween(Now,ADOTable1DateTimeField.AsDateTime);
   //ShowMessage(inttostr(YearsBetween(Now,ADOTable1DateTimeField.AsDateTime)));
 end;

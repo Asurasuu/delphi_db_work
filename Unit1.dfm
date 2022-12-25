@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 540
   Top = 291
   Caption = '5 '#1083#1072#1073#1086#1088#1072#1090#1086#1088#1085#1072#1103' ('#1087#1086#1076#1082#1083#1102#1095#1077#1085#1080#1077' '#1080' '#1088#1072#1073#1086#1090#1072' '#1089' ms access)'
-  ClientHeight = 510
+  ClientHeight = 511
   ClientWidth = 853
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,11 +19,13 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 857
-    Height = 511
+    Height = 625
     ActivePage = TabSheet1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1057#1083#1091#1078#1072#1097#1080#1077
+      ExplicitLeft = 0
+      ExplicitTop = 16
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
@@ -49,6 +51,7 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = #1054#1090#1076#1077#1083#1099
       ImageIndex = 1
+      ExplicitHeight = 483
       object DBGrid2: TDBGrid
         Left = 0
         Top = 0
@@ -86,6 +89,7 @@ object Form1: TForm1
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    Filtered = True
     OnCalcFields = ADOTable1OnCalcFields
     TableName = #1057#1083#1091#1078#1072#1097#1080#1077
     Left = 792
