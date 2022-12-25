@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ActnList, ComCtrls, DB, ADODB, Grids, DBGrids, ExtCtrls,
-  DBCtrls;
+  DBCtrls, DateUtils;
 
 type
   TForm1 = class(TForm)
@@ -31,7 +31,9 @@ type
     ADOTable1DateTimeField: TDateTimeField;
     ADOTable1IntegerField: TIntegerField;
     ADOTable1Field: TStringField;
+    ADOTable1Field2: TIntegerField;
     procedure FormCreate(Sender: TObject);
+    procedure ADOTable1OnCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -51,6 +53,12 @@ begin
   Form1.DBGrid1.Columns[4].PickList.Clear;
   Form1.DBGrid1.Columns[4].PickList.Add('ì');
   Form1.DBGrid1.Columns[4].PickList.Add('æ');
+end;
+
+procedure TForm1.ADOTable1OnCalcFields(DataSet: TDataSet);
+begin                           
+  ADOTable1Field2.AsInteger:=YearsBetween(Now,ADOTable1DateTimeField.AsDateTime);
+  //ShowMessage(inttostr(YearsBetween(Now,ADOTable1DateTimeField.AsDateTime)));
 end;
 
 end.

@@ -24,7 +24,6 @@ object Form1: TForm1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1057#1083#1091#1078#1072#1097#1080#1077
-      ExplicitHeight = 21
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
@@ -87,6 +86,7 @@ object Form1: TForm1
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    OnCalcFields = ADOTable1OnCalcFields
     TableName = #1057#1083#1091#1078#1072#1097#1080#1077
     Left = 792
     Top = 480
@@ -124,6 +124,11 @@ object Form1: TForm1
       KeyFields = #1050#1086#1076' '#1086#1090#1076#1077#1083#1072
       Size = 15
       Lookup = True
+    end
+    object ADOTable1Field2: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = #1042#1086#1079#1088#1072#1090
+      Calculated = True
     end
   end
   object DataSource1: TDataSource
