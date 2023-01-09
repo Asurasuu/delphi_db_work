@@ -24,8 +24,6 @@ object Form1: TForm1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1057#1083#1091#1078#1072#1097#1080#1077
-      ExplicitLeft = 0
-      ExplicitTop = 16
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
@@ -51,6 +49,9 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = #1054#1090#1076#1077#1083#1099
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
       ExplicitHeight = 483
       object DBGrid2: TDBGrid
         Left = 0
